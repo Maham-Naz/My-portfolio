@@ -1636,7 +1636,7 @@ input, textarea, button {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 4rem;
     align-items: start;
 }
@@ -1650,6 +1650,9 @@ input, textarea, button {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     transition: var(--transition-smooth);
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 .contact-form-wrapper:hover,
@@ -1782,6 +1785,9 @@ input, textarea, button {
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 .social-link-card::before {
@@ -2218,7 +2224,7 @@ input, textarea, button {
         gap: 2.5rem;
     }
     .contact-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 3rem;
     }
     .about-stats {
